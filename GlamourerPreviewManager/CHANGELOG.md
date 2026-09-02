@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4.0] - 2026-09-02
+
+### Added
+- **Preview Rediscovery & Review Window**: Added a dedicated Review Window (`/gpm review` or via Settings) to inspect and resolve unassigned or conflicting preview image files:
+  - Image thumbnails with middle-click zoom.
+  - Categorization of unassigned files (Name conflicts vs. Orphan files).
+  - Target design selector prioritizing matching names and unassigned designs.
+  - Actions to assign previews, delete image files (with confirmation), or dismiss entries.
+  - Auto-assign button for non-conflicting name matches.
+  - Search filter and rescan button.
+- **Duplicate-Name Disambiguation**: When multiple designs share the exact same name, GPM now tags preview filenames with their short identifier (`"Design [d8f4e2a1].png"`). Uniquely named designs continue to use clean filenames (`"Design.png"`).
+- **Retention & Deletion Policy**: Added an "Auto-delete preview images on design deletion" toggle under Settings (*Previews & Storage* tab, default *Off*). When disabled, deleting a design in Glamourer leaves the image file on disk for reassignment.
+
+### Changed
+- **Disk Rescan Synchronization**: Opening the Review Window or running Rediscover refreshes Glamourer's design files directly from disk without requiring a plugin restart.
+- **Shared File Protection**: Overwriting or updating a preview image no longer deletes the existing file if another design is currently using it.
+
+---
+
 ## [1.1.3.1] - 2026-08-20
 
 ### Fixed
