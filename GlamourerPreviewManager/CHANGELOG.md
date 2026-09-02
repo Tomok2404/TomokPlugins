@@ -16,6 +16,8 @@ All notable changes to this project will be documented in this file.
 - **Retention & Deletion Policy**: Added an "Auto-delete preview images on design deletion" toggle under Settings (*Previews & Storage* tab, default *Off*). When disabled, deleting a design in Glamourer leaves the image file on disk for reassignment.
 
 ### Changed
+- **Reflection-First Design Resolution**: Prioritized Glamourer's internal design selection reflection as the primary authority during ImGui selection hooks, preventing label string collisions across duplicate design names.
+- **Explicit Screenshot Target Locking**: Locked target design GUIDs during screenshot capture to prevent UI focus shifts from saving screenshots to the wrong design.
 - **Disk Rescan Synchronization**: Opening the Review Window or running Rediscover refreshes Glamourer's design files directly from disk without requiring a plugin restart.
 - **Shared File Protection**: Overwriting or updating a preview image no longer deletes the existing file if another design is currently using it.
 
