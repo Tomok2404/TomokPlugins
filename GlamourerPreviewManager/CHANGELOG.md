@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4.1] - 2026-09-02
+
+### Fixed
+- **Design Selection with Collapsed Design Details**: Fixed an issue where design previews became unresponsive or stuck on a previously selected outfit when the "Design Details" panel in Glamourer was collapsed.
+- **Dalamud Plugin Wrapper Reflection**: Unwrapped Dalamud's internal `ExposedPlugin.<plugin>P` proxy field during reflection to access the underlying `Glamourer` instance and `DesignFileSystem.Selection` directly.
+- **Tree Node Fallback Disambiguation**: Added automatic duplicate suffix removal (` (2)`) and multi-candidate resolution to fallback label matching, preventing UI freezes when duplicate design names or folder path prefixes are present.
+- **Filename Matching**: Prioritized exact filename matches before applying duplicate-number stripping during preview file rediscovery.
+
 ## [1.1.4.0] - 2026-09-02
 
 ### Added
