@@ -19,6 +19,10 @@ All notable changes to this project will be documented in this file.
 - **Disk Rescan Synchronization**: Opening the Review Window or running Rediscover refreshes Glamourer's design files directly from disk without requiring a plugin restart.
 - **Shared File Protection**: Overwriting or updating a preview image no longer deletes the existing file if another design is currently using it.
 
+### Fixed
+- **Duplicate Design Name Preview Cross-Assignment**: Fixed an issue where taking a screenshot, pasting from clipboard, or importing an image for a design that shared its name with another design caused the preview image to be applied to and shared by both designs.
+- **Unintended Image Deletion during Scans**: Fixed an issue where unassigned image files in the preview folder could be deleted during folder scans or rediscovery.
+
 ---
 
 ## [1.1.3.1] - 2026-08-20
